@@ -129,7 +129,13 @@ let custoEstoque = produtos.reduce((acumulador, produto) => acumulador + (produt
 console.log(custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
 
 
-let valorTotalEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.preco_venda * produto.estoque), 0);
-let totalEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.estoque),0);
-console.log(valorTotalEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
-console.log(totalEstoque);
+//let valorTotalEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.preco_venda * produto.estoque), 0);
+//let totalEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.estoque),0);
+//console.log(valorTotalEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
+//console.log(totalEstoque);
+
+let estoque = produtos.filter(produto => produto.estoque <= 50);
+console.table(estoque);
+
+let estoqueFind = produtos.find((produto) => produto.estoque <= 50);
+console.log(estoqueFind);
