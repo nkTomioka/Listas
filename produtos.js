@@ -1,4 +1,4 @@
-let produtos = [
+ export let produtos = [
   { id: 1, nome: "Coca-cola 2L", preco_venda: 10.0, preco_compra: 5.0, estoque: 100, rotatividade: "alta", curva_abc: "A" },
   { id: 2, nome: "Pepsi 2L", preco_venda: 9.0, preco_compra: 4.5, estoque: 80, rotatividade: "alta", curva_abc: "B" },
   { id: 3, nome: "Fanta Laranja 2L", preco_venda: 8.0, preco_compra: 4.0, estoque: 60, rotatividade: "media", curva_abc: "B" },
@@ -101,17 +101,17 @@ let produtos = [
   { id: 100, nome: "Filme de PVC", preco_venda: 6.0, preco_compra: 3.5, estoque: 80, rotatividade: "media", curva_abc: "C" },
 ];
 
-console.table(produtos);
+//console.table(produtos);
 
-produtos.push({id: 101, nome: "Água de coco", preco_venda: 1.59, preco_compra: .80, estoque: 500, rotatividade: "alta", curva_abc: "B"})
+//produtos.push({id: 101, nome: "Água de coco", preco_venda: 1.59, preco_compra: .80, estoque: 500, rotatividade: "alta", curva_abc: "B"})
 
-produtos.splice(13, 1);
+//produtos.splice(13, 1);
 
 // console.table(produtos);
 
-let nomes = produtos.map((produto) => produto.nome);
+//let nomes = produtos.map((produto) => produto.nome);
 
-let desconto = produtos.map((produto) => ({...produto, desconto: produto.preco_venda * 0.9 }));
+//let desconto = produtos.map((produto) => ({...produto, desconto: produto.preco_venda * 0.9 }));
 
 // console.table(desconto);
 
@@ -125,8 +125,8 @@ let desconto = produtos.map((produto) => ({...produto, desconto: produto.preco_v
 // console.table(estoqueBaixo);
 
 
-let custoEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.preco_compra * produto.estoque), 0);
-console.log(custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
+//let custoEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.preco_compra * produto.estoque), 0);
+//console.log(custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
 
 
 //let valorTotalEstoque = produtos.reduce((acumulador, produto) => acumulador + (produto.preco_venda * produto.estoque), 0);
@@ -134,8 +134,8 @@ console.log(custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: 
 //console.log(valorTotalEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL"}))
 //console.log(totalEstoque);
 
-let estoque = produtos.filter(produto => produto.estoque <= 50);
-console.table(estoque);
+//let estoque = produtos.filter(produto => produto.estoque <= 50);
+//console.table(estoque);
 
-let estoqueFind = produtos.find((produto) => produto.estoque <= 50);
-console.log(estoqueFind);
+//let estoqueFind = produtos.find((produto) => produto.estoque <= 50);
+//console.log(estoqueFind);
